@@ -1,144 +1,648 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Yono Games Hub</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>👑 Lodu King</title>
+    <style>
+        /* ── RESET & BASE ── */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            user-select: none;
+        }
 
-<style>
-*{
-margin:0;
-padding
-box-sizing:border-box;
-font-family:Arial,sans-serif;
-}
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(145deg, #1a0a2e 0%, #2d1b4e 100%);
+            padding: 16px;
+        }
 
-body{
-background:#f4f6f9;
-}
+        /* ── GAME CARD ── */
+        .game-container {
+            max-width: 460px;
+            width: 100%;
+            background: linear-gradient(145deg, #3e2a5e, #281b3d);
+            border-radius: 48px 48px 32px 32px;
+            padding: 28px 24px 32px;
+            box-shadow:
+                0 20px 60px rgba(0, 0, 0, 0.7),
+                inset 0 2px 0 rgba(255, 215, 0, 0.15);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            transition: transform 0.2s;
+        }
 
-header{
-background:#0a7f3f;
-color:white;
-padding:20px;
-text-align:center;
-font-size:28px;
-font-weight:bold;
-}
+        /* ── HEADER ── */
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 12px;
+        }
 
-.container{
-max-width:1100px;
-margin:auto;
-padding:20px;
-}
+        .title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
 
-.card{
-background:white;
-border-radius:15px;
-padding:15px;
-margin-bottom:20px;
-display:flex;
-align-items:center;
-gap:20px;
-box-shadow:0 4px 10px rgba(0,0,0,.1);
-}
+        .title h1 {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ffd700, #ffb300);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.25);
+            letter-spacing: 1px;
+        }
 
-.card img{
-width:120px;
-height:120px;
-object-fit:cover;
-border-radius:15px;
-}
+        .title .crown {
+            font-size: 2.2rem;
+            filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.5));
+            animation: float 2.5s ease-in-out infinite;
+        }
 
-.info{
-flex:1;
-}
+        @keyframes float {
+            0%,
+            100% {
+                transform: translateY(0) rotate(-2deg);
+            }
+            50% {
+                transform: translateY(-6px) rotate(2deg);
+            }
+        }
 
-.info h2{
-margin-bottom:10px;
-color:#222;
-}
+        .reset-btn {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            color: #c9b8e6;
+            font-size: 1.2rem;
+            padding: 6px 14px;
+            border-radius: 40px;
+            cursor: pointer;
+            transition: all 0.25s;
+            backdrop-filter: blur(4px);
+        }
 
-.info p{
-margin:5px 0;
-}
+        .reset-btn:hover {
+            background: rgba(255, 70, 70, 0.2);
+            border-color: rgba(255, 100, 100, 0.3);
+            color: #ff9e9e;
+            transform: scale(1.05);
+        }
 
-.btn{
-display:inline-block;
-margin-top:10px;
-padding:12px 25px;
-background:#0066ff;
-color:white;
-text-decoration:none;
-border-radius:8px;
-font-weight:bold;
-}
+        /* ── SCORE BOARD ── */
+        .score-board {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 80px;
+            padding: 14px 24px;
+            margin: 8px 0 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid rgba(255, 215, 0, 0.15);
+            backdrop-filter: blur(8px);
+        }
 
-.btn:hover{
-background:#004bcc;
-}
+        .score-label {
+            color: #b8a5d9;
+            font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
 
-footer{
-text-align:center;
-padding:20px;
-color:#666;
-}
-</style>
+        .score-value {
+            font-size: 2.4rem;
+            font-weight: 800;
+            color: #ffd700;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3);
+            line-height: 1;
+        }
+
+        /* ── KING AVATAR ── */
+        .king-area {
+            display: flex;
+            justify-content: center;
+            margin: 8px 0 16px;
+            position: relative;
+        }
+
+        .king-btn {
+            background: radial-gradient(circle at 30% 30%, #ffd966, #b8860b);
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 4px solid #ffd700;
+            box-shadow:
+                0 0 0 8px rgba(255, 215, 0, 0.15),
+                0 16px 48px rgba(0, 0, 0, 0.5),
+                inset 0 -8px 20px rgba(0, 0, 0, 0.3);
+            cursor: pointer;
+            transition: all 0.08s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            font-size: 5rem;
+            line-height: 1;
+            position: relative;
+            color: #fff;
+            text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .king-btn:active {
+            transform: scale(0.92);
+            box-shadow:
+                0 0 0 12px rgba(255, 215, 0, 0.25),
+                0 8px 24px rgba(0, 0, 0, 0.6);
+        }
+
+        .king-btn .king-emoji {
+            font-size: 5.6rem;
+            filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+            transition: transform 0.15s;
+        }
+
+        .king-btn:active .king-emoji {
+            transform: scale(0.9) rotate(-6deg);
+        }
+
+        .king-btn .click-hint {
+            font-size: 0.75rem;
+            background: rgba(0, 0, 0, 0.4);
+            padding: 4px 14px;
+            border-radius: 40px;
+            margin-top: 2px;
+            color: #ffe49e;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+        }
+
+        /* floating +1 popup */
+        .popup {
+            position: fixed;
+            pointer-events: none;
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #ffd700;
+            text-shadow: 0 0 20px rgba(255, 215, 0, 0.6), 0 4px 12px rgba(0, 0, 0, 0.5);
+            animation: popUp 0.9s ease-out forwards;
+            z-index: 999;
+        }
+
+        @keyframes popUp {
+            0% {
+                opacity: 1;
+                transform: translateY(0) scale(0.6);
+            }
+            40% {
+                transform: translateY(-50px) scale(1.2);
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(-120px) scale(1);
+            }
+        }
+
+        /* ── STATS / UPGRADES ── */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin: 20px 0 16px;
+        }
+
+        .stat-card {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 20px;
+            padding: 14px 12px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(4px);
+            transition: all 0.2s;
+        }
+
+        .stat-card:hover {
+            background: rgba(255, 215, 0, 0.05);
+            border-color: rgba(255, 215, 0, 0.15);
+        }
+
+        .stat-label {
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #9a84b9;
+            font-weight: 600;
+        }
+
+        .stat-number {
+            font-size: 1.7rem;
+            font-weight: 700;
+            color: #f0e6ff;
+            margin-top: 2px;
+        }
+
+        .stat-number.gold {
+            color: #ffd700;
+        }
+
+        /* ── UPGRADE BUTTONS ── */
+        .upgrade-section {
+            margin-top: 8px;
+        }
+
+        .upgrade-btn {
+            width: 100%;
+            padding: 14px 16px;
+            border-radius: 60px;
+            border: none;
+            background: linear-gradient(145deg, #4a3570, #342252);
+            color: #e8d9ff;
+            font-weight: 700;
+            font-size: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid rgba(255, 215, 0, 0.08);
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            margin-bottom: 10px;
+        }
+
+        .upgrade-btn:hover:not(:disabled) {
+            background: linear-gradient(145deg, #5d4285, #3f2b60);
+            border-color: rgba(255, 215, 0, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 28px rgba(0, 0, 0, 0.3);
+        }
+
+        .upgrade-btn:active:not(:disabled) {
+            transform: scale(0.97);
+        }
+
+        .upgrade-btn:disabled {
+            opacity: 0.35;
+            cursor: not-allowed;
+            filter: grayscale(0.6);
+        }
+
+        .upgrade-left {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .upgrade-icon {
+            font-size: 1.6rem;
+        }
+
+        .upgrade-name {
+            font-size: 0.95rem;
+        }
+
+        .upgrade-detail {
+            font-size: 0.75rem;
+            color: #b09bc9;
+            font-weight: 400;
+        }
+
+        .upgrade-cost {
+            background: rgba(255, 215, 0, 0.12);
+            padding: 4px 16px;
+            border-radius: 40px;
+            color: #ffd700;
+            font-weight: 700;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        /* ── RANK / TITLE ── */
+        .rank-display {
+            text-align: center;
+            margin-top: 18px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .rank-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #c9b8e6;
+            letter-spacing: 0.5px;
+        }
+
+        .rank-title span {
+            color: #ffd700;
+            font-weight: 800;
+        }
+
+        /* ── RESPONSIVE ── */
+        @media (max-width: 420px) {
+            .game-container {
+                padding: 20px 16px 24px;
+            }
+            .title h1 {
+                font-size: 1.4rem;
+            }
+            .king-btn {
+                width: 150px;
+                height: 150px;
+            }
+            .king-btn .king-emoji {
+                font-size: 4.6rem;
+            }
+            .score-value {
+                font-size: 1.8rem;
+            }
+            .stats-grid {
+                gap: 8px;
+            }
+            .stat-number {
+                font-size: 1.3rem;
+            }
+            .upgrade-btn {
+                padding: 12px 14px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
 </head>
 <body>
 
-<header>
-ðŸŽ® Yono Games Hub
-</header>
+    <div class="game-container">
+        <!-- Header -->
+        <div class="header">
+            <div class="title">
+                <span class="crown">👑</span>
+                <h1>Lodu King</h1>
+            </div>
+            <button class="reset-btn" id="resetBtn">⟳</button>
+        </div>
 
-<div class="container">
+        <!-- Score -->
+        <div class="score-board">
+            <span class="score-label">✨ Lodu Points</span>
+            <span class="score-value" id="scoreDisplay">0</span>
+        </div>
 
-<div class="card">
-<img src="https://i.ibb.co/JjrZjn2n/teen-patti-master.jpg" alt="Teen Patti Master">
-<div class="info">
-<h2>Teen Patti Master</h2>
-<p>Popular Teen Patti Card Game.</p>
-<a class="btn" href="https://www.earntp.com/m/jm9n7r" target="_blank">
-Download Now
-</a>
-</div>
-</div>
+        <!-- King -->
+        <div class="king-area">
+            <button class="king-btn" id="kingBtn">
+                <span class="king-emoji">🤴</span>
+                <span class="click-hint">👆 TAP</span>
+            </button>
+        </div>
 
-<div class="card">
-<img src="https://i.ibb.co/zTFDGPpX/yono-rummy.jpg" alt="Yono Rummy">
-<div class="info">
-<h2>Yono Rummy</h2>
-<p>â‚¹13+ Signup Bonus</p>
-<p>Daily Login Rewards up to â‚¹90</p>
-<p>3% - 30% Deposit Cashback</p>
-<a class="btn"
-href="https://yonorummy043.com/?code=VIPYQC5EE9X&t=1781107758"
-target="_blank">
-Play Now
-</a>
-</div>
-</div>
+        <!-- Stats -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-label">⚡ Per Click</div>
+                <div class="stat-number gold" id="perClickDisplay">1</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-label">⏱️ Per Second</div>
+                <div class="stat-number gold" id="perSecDisplay">0</div>
+            </div>
+        </div>
 
-<div class="card">
-<img src="https://i.ibb.co/NdbNBtx7/slots-winner.jpg" alt="Slots Winner">
-<div class="info">
-<h2>Slots Winner</h2>
-<p>â‚¹18 - â‚¹100 Signup Bonus</p>
-<p>250% First Deposit Bonus</p>
-<p>VIP Cashback & Referral Rewards</p>
-<a class="btn"
-href="https://slotswinneri.com/?code=PGVC6CBNF53&t=1781107393"
-target="_blank">
-Join Now
-</a>
-</div>
-</div>
+        <!-- Upgrades -->
+        <div class="upgrade-section">
+            <button class="upgrade-btn" id="upgradeClick">
+                <span class="upgrade-left">
+                    <span class="upgrade-icon">👆</span>
+                    <span>
+                        <span class="upgrade-name">Stronger Tap</span>
+                        <br />
+                        <span class="upgrade-detail">+1 per click</span>
+                    </span>
+                </span>
+                <span class="upgrade-cost" id="clickCost">10</span>
+            </button>
 
-</div>
+            <button class="upgrade-btn" id="upgradeAuto">
+                <span class="upgrade-left">
+                    <span class="upgrade-icon">⏳</span>
+                    <span>
+                        <span class="upgrade-name">Royal Minion</span>
+                        <br />
+                        <span class="upgrade-detail">+1 per second</span>
+                    </span>
+                </span>
+                <span class="upgrade-cost" id="autoCost">50</span>
+            </button>
+        </div>
 
-<footer>
-Â© 2025 Yono Games Hub
-</footer>
+        <!-- Rank -->
+        <div class="rank-display">
+            <div class="rank-title">
+                👑 <span id="rankText">Peasant</span> 👑
+            </div>
+        </div>
+    </div>
+
+    <script>
+        (function() {
+            "use strict";
+
+            // ─── STATE ──────────────────────────────────────────────
+            let score = 0;
+            let perClick = 1;
+            let perSecond = 0;
+
+            let clickLevel = 0;
+            let autoLevel = 0;
+
+            const CLICK_BASE_COST = 10;
+            const AUTO_BASE_COST = 50;
+
+            // ─── DOM REFS ──────────────────────────────────────────
+            const scoreDisplay = document.getElementById('scoreDisplay');
+            const perClickDisplay = document.getElementById('perClickDisplay');
+            const perSecDisplay = document.getElementById('perSecDisplay');
+            const clickCostEl = document.getElementById('clickCost');
+            const autoCostEl = document.getElementById('autoCost');
+            const rankText = document.getElementById('rankText');
+
+            const kingBtn = document.getElementById('kingBtn');
+            const resetBtn = document.getElementById('resetBtn');
+            const upgradeClickBtn = document.getElementById('upgradeClick');
+            const upgradeAutoBtn = document.getElementById('upgradeAuto');
+
+            // ─── HELPERS ────────────────────────────────────────────
+            function formatNumber(n) {
+                if (n >= 1e6) return (n / 1e6).toFixed(1) + 'M';
+                if (n >= 1e3) return (n / 1e3).toFixed(1) + 'K';
+                return Math.floor(n).toString();
+            }
+
+            function getClickCost() {
+                return Math.floor(CLICK_BASE_COST * Math.pow(1.5, clickLevel));
+            }
+
+            function getAutoCost() {
+                return Math.floor(AUTO_BASE_COST * Math.pow(1.6, autoLevel));
+            }
+
+            // ─── RANK SYSTEM ────────────────────────────────────────
+            function getRank(s) {
+                if (s >= 100000) return '👑 Lodu Emperor';
+                if (s >= 25000) return '🌟 Lodu Maharaja';
+                if (s >= 5000) return '💎 Lodu Prince';
+                if (s >= 1000) return '✨ Lodu Noble';
+                if (s >= 250) return '⚜️ Lodu Squire';
+                if (s >= 50) return '🛡️ Lodu Page';
+                return '🍂 Peasant';
+            }
+
+            function updateRank() {
+                rankText.textContent = getRank(score);
+            }
+
+            // ─── UPDATE UI ──────────────────────────────────────────
+            function updateUI() {
+                scoreDisplay.textContent = formatNumber(score);
+                perClickDisplay.textContent = perClick;
+                perSecDisplay.textContent = perSecond;
+
+                clickCostEl.textContent = formatNumber(getClickCost());
+                autoCostEl.textContent = formatNumber(getAutoCost());
+
+                // Disable upgrades if not enough score
+                upgradeClickBtn.disabled = (score < getClickCost());
+                upgradeAutoBtn.disabled = (score < getAutoCost());
+
+                updateRank();
+            }
+
+            // ─── FLOATING POPUP ─────────────────────────────────────
+            function spawnPopup(x, y, text) {
+                const el = document.createElement('div');
+                el.className = 'popup';
+                el.textContent = text;
+                el.style.left = (x - 20) + 'px';
+                el.style.top = (y - 20) + 'px';
+                document.body.appendChild(el);
+                setTimeout(() => el.remove(), 950);
+            }
+
+            // ─── ADD SCORE (with popup) ─────────────────────────────
+            function addScore(amount, event) {
+                if (amount <= 0) return;
+                score += amount;
+                updateUI();
+
+                // popup on king click only
+                if (event && event.clientX) {
+                    const rect = kingBtn.getBoundingClientRect();
+                    const cx = rect.left + rect.width / 2;
+                    const cy = rect.top + rect.height / 2;
+                    const offsetX = (Math.random() - 0.5) * 80;
+                    const offsetY = (Math.random() - 0.5) * 60;
+                    spawnPopup(cx + offsetX, cy + offsetY, '+' + amount);
+                }
+            }
+
+            // ─── KING CLICK ──────────────────────────────────────────
+            function handleKingClick(e) {
+                addScore(perClick, e);
+                // tiny haptic-like feedback
+                kingBtn.style.transform = 'scale(0.92)';
+                setTimeout(() => kingBtn.style.transform = '', 80);
+            }
+
+            // ─── UPGRADE: CLICK ─────────────────────────────────────
+            function handleUpgradeClick() {
+                const cost = getClickCost();
+                if (score < cost) return;
+                score -= cost;
+                clickLevel++;
+                perClick += 1;
+                updateUI();
+                // popup on upgrade button
+                const rect = upgradeClickBtn.getBoundingClientRect();
+                spawnPopup(rect.left + rect.width / 2 - 20, rect.top - 10, '⬆');
+            }
+
+            // ─── UPGRADE: AUTO ──────────────────────────────────────
+            function handleUpgradeAuto() {
+                const cost = getAutoCost();
+                if (score < cost) return;
+                score -= cost;
+                autoLevel++;
+                perSecond += 1;
+                updateUI();
+                const rect = upgradeAutoBtn.getBoundingClientRect();
+                spawnPopup(rect.left + rect.width / 2 - 20, rect.top - 10, '⏳');
+            }
+
+            // ─── AUTO TICK ──────────────────────────────────────────
+            function autoTick() {
+                if (perSecond > 0) {
+                    // no popup for auto ticks (too spammy)
+                    score += perSecond;
+                    updateUI();
+                }
+            }
+
+            // ─── RESET ──────────────────────────────────────────────
+            function resetGame() {
+                if (confirm('Reset your kingdom, Lodu King?')) {
+                    score = 0;
+                    perClick = 1;
+                    perSecond = 0;
+                    clickLevel = 0;
+                    autoLevel = 0;
+                    updateUI();
+                }
+            }
+
+            // ─── KEYBOARD SHORTCUTS ────────────────────────────────
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'r' || e.key === 'R') resetGame();
+                if (e.key === ' ' || e.key === 'Enter') {
+                    e.preventDefault();
+                    handleKingClick(e);
+                }
+            });
+
+            // ─── INIT ───────────────────────────────────────────────
+            function init() {
+                updateUI();
+
+                // Event listeners
+                kingBtn.addEventListener('click', handleKingClick);
+                resetBtn.addEventListener('click', resetGame);
+                upgradeClickBtn.addEventListener('click', handleUpgradeClick);
+                upgradeAutoBtn.addEventListener('click', handleUpgradeAuto);
+
+                // Auto-tick every second
+                setInterval(autoTick, 1000);
+
+                // Touch feedback for mobile
+                kingBtn.addEventListener('touchstart', (e) => {
+                    // prevent double-tap zoom
+                    e.preventDefault();
+                }, { passive: false });
+
+                console.log('👑 Lodu King loaded!');
+                console.log('💡 Click the king, upgrade, and rule!');
+            }
+
+            // go
+            init();
+
+        })();
+    </script>
 
 </body>
 </html>
