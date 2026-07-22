@@ -2642,16 +2642,30 @@
 
     function getDescription(appName, category, bonusAmount) {
 
+        // Unique tags per app name (model)
         if (appName === "INR Rummy") {
-
             return `Join the best rummy experience on INR Rummy. Compete with real players, win cash prizes, and enjoy daily tournaments. ₹56 welcome bonus + ₹100 min withdrawal. INR Rummy App offers online rummy games with real cash winnings. Get the latest APK version, claim bonuses, and enjoy smooth gameplay with fast withdrawals.`;
-
         } else if (appName === "MBM BET") {
-
             return `MBM Bet (Yono) provides a superior real-money gaming experience with fast gameplay, secure payments, and verified ₹100 withdrawals. The new version features smooth performance, instant registration, and high-return games. With daily bonuses, stable servers, and trusted payouts, MBM Bet stands out as one of the strongest earning apps in the Yono series.`;
-
+        } else if (appName === "Bingo 101") {
+            return `Download Bingo 101 APK and get ₹50–₹500 signup bonus instantly. Play real bingo games, win money, earn rewards, and withdraw your cash directly via UPI.`;
+        } else if (appName === "Jaiho 91") {
+            return `Download Jaiho 91 APK and get ₹50 signup bonus instantly. Play exciting casino games, win real money, earn daily rewards, and withdraw cash directly via UPI. Fast secure platform with 24/7 support.`;
+        } else if (appName === "Rummy 91") {
+            return `Download Rummy91 APK and get a ₹35–₹191 signup bonus instantly. Play online rummy, earn real cash daily, and withdraw securely via UPI from just ₹100.`;
+        } else if (appName === "Yono Games") {
+            return `Claim your ₹37–₹268 signup bonus on Yono Games and start playing instantly. With a low ₹100 minimum withdrawal and smooth gaming experience, it stands out as one of the best real-cash Rummy apps. Safe, fast, and reliable for daily earnings.`;
+        } else if (appName === "Diwa VIP") {
+            return `Download DIWA VIP APK now & claim your exclusive welcome bonus! Access premium high-RTP slots and games with priority, ultra-fast UPI withdrawals. Join today!`;
+        } else if (appName === "Diwa Slot") {
+            return `Diwa Slots App – Free ₹35–₹500 Sign Up Bonus | Play & Win | Instant Withdraw ₹100 - Download APK. Diwa Slots App is a real cash gaming platform where users can play exciting slot and skill-based games to earn money online.`;
+        } else if (appName === "Saga Slots") {
+            return `Saga Slots (Yono) offers Signup Bonus ₹30–₹60 and premium slot gameplay, fast bonus rewards, and instant ₹100 UPI withdrawals. Enjoy smooth spins, daily bonuses, and real cash winnings.`;
+        } else if (appName === "567 Slots") {
+            return `Download 567 Slots 2026 for a superior slot gaming experience. Featuring stable servers, premium slot games, daily bonus rewards, and trusted withdrawals, it provides a reliable and enjoyable earning environment.`;
         }
 
+        // Fallback
         if (category === "Rummy") return `Join the best rummy experience on ${appName}. Compete with real players, win cash prizes, and enjoy daily tournaments. ${bonusAmount} welcome bonus + ₹100 min withdrawal.`;
 
         if (category === "Slots") return `Spin & win with ${appName}! Huge jackpots, free spins, and ${bonusAmount} joining bonus. Play premium slot machines and withdraw your winnings instantly.`;
@@ -2667,33 +2681,74 @@
     function getFAQ(appName, bonusAmount) {
 
         if (appName === "INR Rummy") {
-
             return `
-
             <div class="faq-item"><div class="faq-question">Q.1 What is INR Rummy?</div><div class="faq-answer">INR Rummy is a real cash online rummy gaming platform designed for Indian players. It offers multiple rummy tables, fast withdrawals via UPI, and a signup bonus of ₹56.</div></div>
-
             <div class="faq-item"><div class="faq-question">Q.2 How to download INR Rummy APK?</div><div class="faq-answer">Click on the DOWNLOAD button, allow unknown sources, install the APK, register with mobile number, and claim your ₹56 bonus.</div></div>
-
             <div class="faq-item"><div class="faq-question">Q.3 What games are available in INR Rummy?</div><div class="faq-answer">INR Rummy offers Rummy, Teen Patti, Poker, and other skill-based games.</div></div>
-
             <div class="faq-item"><div class="faq-question">Q.4 What is the minimum withdrawal in INR Rummy?</div><div class="faq-answer">The minimum withdrawal amount is ₹100, processed via UPI.</div></div>
-
             `;
-
         } else if (appName === "MBM BET") {
-
             return `
-
             <div class="faq-item"><div class="faq-question">Q.1 What is MBM Bet?</div><div class="faq-answer">MBM Bet is a real-money gaming app with fast gameplay, secure payments, and verified ₹100 withdrawals. It offers daily bonuses and high-return games.</div></div>
-
             <div class="faq-item"><div class="faq-question">Q.2 How to download MBM Bet APK?</div><div class="faq-answer">Click the DOWNLOAD button, enable unknown sources, install the APK, register, and claim your ₹39 bonus.</div></div>
-
             <div class="faq-item"><div class="faq-question">Q.3 What games are available in MBM Bet?</div><div class="faq-answer">MBM Bet offers Rummy, Teen Patti, Poker, and various casino games.</div></div>
-
             <div class="faq-item"><div class="faq-question">Q.4 What is the minimum withdrawal in MBM Bet?</div><div class="faq-answer">The minimum withdrawal is ₹100, processed via UPI.</div></div>
-
             `;
-
+        } else if (appName === "Bingo 101") {
+            return `
+            <div class="faq-item"><div class="faq-question">Q.1 What is the Bingo 101 APK?</div><div class="faq-answer">The Bingo 101 APK is an excellent application that offers users a sign-up bonus of ₹45 when they join. This game includes a fantastic bonus program. Additionally, Bingo 101 is a popular real-money gaming app with a minimum withdrawal amount of ₹100 and instant UPI payouts.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.2 How do I sign up for the Bingo 101 APK?</div><div class="faq-answer">To sign up, click on the DOWNLOAD button, install the APK, open the app, register with your mobile number & verify OTP. After completing these steps, you will receive a sign-up bonus of ₹45.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.3 How many games are available in the Bingo 101 app?</div><div class="faq-answer">The Bingo 101 app offers support for 20+ different types of games including Rummy, Teen Patti, Slots, Dragon vs Tiger, Andar Bahar, and many more.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.4 What are some of the best features of the Bingo 101 APK?</div><div class="faq-answer">Features include: ₹45 free signup bonus, 20+ gaming options, earn up to ₹150 for inviting friends, instant UPI withdrawals, 24/7 customer support, and daily login rewards.</div></div>
+            `;
+        } else if (appName === "Jaiho 91") {
+            return `
+            <div class="faq-item"><div class="faq-question">Q.1 What is the Jaiho 91 APK?</div><div class="faq-answer">The Jaiho 91 APK is an excellent application that offers users a sign-up bonus of ₹50 when they join. This game includes a fantastic bonus program. Additionally, Jaiho 91 is a popular real-money gaming app with a minimum withdrawal amount of ₹100 and instant UPI payouts.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.2 How do I sign up for the Jaiho 91 APK?</div><div class="faq-answer">To sign up, click on the DOWNLOAD button, install the APK, open the app, register with your mobile number & verify OTP. After completing these steps, you will receive a sign-up bonus of ₹50.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.3 How many games are available in the Jaiho 91 app?</div><div class="faq-answer">The Jaiho 91 app offers support for 20+ different types of games including Rummy, Teen Patti, Slots, Dragon vs Tiger, Andar Bahar, and many more.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.4 What are some of the best features of the Jaiho 91 APK?</div><div class="faq-answer">Features include: ₹50 free signup bonus, 20+ gaming options, earn up to ₹150 for inviting friends, instant UPI withdrawals, 24/7 customer support, and daily login rewards.</div></div>
+            `;
+        } else if (appName === "Rummy 91") {
+            return `
+            <div class="faq-item"><div class="faq-question">Q.1 What is the Rummy 91 APK?</div><div class="faq-answer">The Rummy 91 APK is an excellent application that offers users a sign-up bonus of ₹38 when they join. This game includes a fantastic bonus program. Additionally, Rummy 91 is a popular real-money gaming app with a minimum withdrawal amount of ₹100 and instant UPI payouts.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.2 How do I sign up for the Rummy 91 APK?</div><div class="faq-answer">To sign up, click on the DOWNLOAD button, install the APK, open the app, register with your mobile number & verify OTP. After completing these steps, you will receive a sign-up bonus of ₹38.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.3 How many games are available in the Rummy 91 app?</div><div class="faq-answer">The Rummy 91 app offers support for 20+ different types of games including Rummy, Teen Patti, Slots, Dragon vs Tiger, Andar Bahar, and many more.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.4 What are some of the best features of the Rummy 91 APK?</div><div class="faq-answer">Features include: ₹38 free signup bonus, 20+ gaming options, earn up to ₹150 for inviting friends, instant UPI withdrawals, 24/7 customer support, and daily login rewards.</div></div>
+            `;
+        } else if (appName === "Yono Games") {
+            return `
+            <div class="faq-item"><div class="faq-question">Q.1 What is the Yono Games APK?</div><div class="faq-answer">The Yono Games APK is an excellent application that offers users a sign-up bonus of ₹45 when they join. This game includes a fantastic bonus program. Additionally, Yono Games is a popular real-money gaming app with a minimum withdrawal amount of ₹100 and instant UPI payouts.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.2 How do I sign up for the Yono Games APK?</div><div class="faq-answer">To sign up, click on the DOWNLOAD button, install the APK, open the app, register with your mobile number & verify OTP. After completing these steps, you will receive a sign-up bonus of ₹45.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.3 How many games are available in the Yono Games app?</div><div class="faq-answer">The Yono Games app offers support for 20+ different types of games including Rummy, Teen Patti, Slots, Dragon vs Tiger, Andar Bahar, and many more.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.4 What are some of the best features of the Yono Games APK?</div><div class="faq-answer">Features include: ₹45 free signup bonus, 20+ gaming options, earn up to ₹150 for inviting friends, instant UPI withdrawals, 24/7 customer support, and daily login rewards.</div></div>
+            `;
+        } else if (appName === "Diwa VIP") {
+            return `
+            <div class="faq-item"><div class="faq-question">Q.1 What is the Diwa VIP APK?</div><div class="faq-answer">The Diwa VIP APK is an excellent application that offers users a sign-up bonus of ₹60 when they join. This game includes a fantastic bonus program. Additionally, Diwa VIP is a popular real-money gaming app with a minimum withdrawal amount of ₹100 and instant UPI payouts.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.2 How do I sign up for the Diwa VIP APK?</div><div class="faq-answer">To sign up, click on the DOWNLOAD button, install the APK, open the app, register with your mobile number & verify OTP. After completing these steps, you will receive a sign-up bonus of ₹60.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.3 How many games are available in the Diwa VIP app?</div><div class="faq-answer">The Diwa VIP app offers support for 20+ different types of games including Rummy, Teen Patti, Slots, Dragon vs Tiger, Andar Bahar, and many more.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.4 What are some of the best features of the Diwa VIP APK?</div><div class="faq-answer">Features include: ₹60 free signup bonus, 20+ gaming options, earn up to ₹150 for inviting friends, instant UPI withdrawals, 24/7 customer support, and daily login rewards.</div></div>
+            `;
+        } else if (appName === "Diwa Slot") {
+            return `
+            <div class="faq-item"><div class="faq-question">Q.1 What is the Diwa Slots APK?</div><div class="faq-answer">Diwa Slots App is a real cash gaming platform where users can play exciting slot and skill-based games to earn money online. New users can get a signup bonus ranging from ₹35 to ₹500 instantly after registration.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.2 How to download Diwa Slots APK?</div><div class="faq-answer">Click the DOWNLOAD button, enable unknown sources, install the APK, register, and claim your bonus.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.3 What is the minimum withdrawal in Diwa Slots?</div><div class="faq-answer">The minimum withdrawal is ₹100, processed via UPI.</div></div>
+            `;
+        } else if (appName === "Saga Slots") {
+            return `
+            <div class="faq-item"><div class="faq-question">Q.1 What is the Saga Slots APK?</div><div class="faq-answer">The Saga Slots APK is an excellent application that offers users a sign-up bonus of ₹40 when they join. This game includes a fantastic bonus program. Additionally, Saga Slots is a popular real-money gaming app with a minimum withdrawal amount of ₹100 and instant UPI payouts.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.2 How do I sign up for the Saga Slots APK?</div><div class="faq-answer">To sign up, click on the DOWNLOAD button, install the APK, open the app, register with your mobile number & verify OTP. After completing these steps, you will receive a sign-up bonus of ₹40.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.3 How many games are available in the Saga Slots app?</div><div class="faq-answer">The Saga Slots app offers support for 20+ different types of games including Rummy, Teen Patti, Slots, Dragon vs Tiger, Andar Bahar, and many more.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.4 What are some of the best features of the Saga Slots APK?</div><div class="faq-answer">Features include: ₹40 free signup bonus, 20+ gaming options, earn up to ₹150 for inviting friends, instant UPI withdrawals, 24/7 customer support, and daily login rewards.</div></div>
+            `;
+        } else if (appName === "567 Slots") {
+            return `
+            <div class="faq-item"><div class="faq-question">Q.1 What is the 567 Slots APK?</div><div class="faq-answer">The 567 Slots APK is an excellent application that offers users a sign-up bonus of ₹45 when they join. This game includes a fantastic bonus program. Additionally, 567 Slots is a popular real-money gaming app with a minimum withdrawal amount of ₹100 and instant UPI payouts.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.2 How do I sign up for the 567 Slots APK?</div><div class="faq-answer">To sign up, click on the DOWNLOAD button, install the APK, open the app, register with your mobile number & verify OTP. After completing these steps, you will receive a sign-up bonus of ₹45.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.3 How many games are available in the 567 Slots app?</div><div class="faq-answer">The 567 Slots app offers support for 20+ different types of games including Rummy, Teen Patti, Slots, Dragon vs Tiger, Andar Bahar, and many more.</div></div>
+            <div class="faq-item"><div class="faq-question">Q.4 What are some of the best features of the 567 Slots APK?</div><div class="faq-answer">Features include: ₹45 free signup bonus, 20+ gaming options, earn up to ₹150 for inviting friends, instant UPI withdrawals, 24/7 customer support, and daily login rewards.</div></div>
+            `;
         }
 
         return `
@@ -2910,184 +2965,173 @@
 
 
 
-        // Build the unique tag panel for INR Rummy
-
+        // Build the unique tag panel for each app (model)
         let tagPanelHtml = '';
 
         if (selectedApp.name === "INR Rummy") {
-
             tagPanelHtml = `
-
-            <button class="tags-toggle-btn" id="tagsToggleBtn">
-
+            <button class="tags-toggle-btn" id="tagsToggleBtn" style="background:linear-gradient(135deg,#1e562a,#2c4c3b);">
                 <span>📋 INR Rummy APK Download Tags</span>
-
                 <span class="arrow" id="tagsArrow">▼</span>
-
             </button>
-
             <div class="tags-panel" id="tagsPanel">
-
                 <div class="tags-panel-content">
-
-                    <div class="tag-block">
-
-                        <h5>📌 INR Rummy (Yono) Game App – Real Cash Rummy for Indian Players</h5>
-
-                        <p>INR Rummy App is a real cash online rummy gaming platform designed for Indian players who want to earn money by using their skills. This app provides a smooth and secure gaming experience with multiple rummy tables to play and win real cash rewards. Players can join different tables, compete with others, and earn real money through gameplay. The interface is simple and user-friendly, making it suitable for both beginners and experienced players. INR Rummy App is known for its fast withdrawal system, where users can withdraw their winnings quickly via UPI. It also offers signup bonuses and daily rewards to help users start earning easily. If you are looking for a reliable rummy app to earn real cash online, INR Rummy App is a great option. Download the APK now and start playing.</p>
-
-                    </div>
-
-                    <div class="tag-block">
-
-                        <h5>📌 About INR Rummy</h5>
-
-                        <p>INR Rummy is one of the most popular gaming applications in India, offering users an exciting opportunity to earn real money while playing their favorite games. With a user-friendly interface and secure payment system, this app has gained the trust of thousands of players across the country. The app features a wide variety of games including Rummy, Teen Patti, Poker, and many other skill-based games that not only provide entertainment but also offer substantial earning opportunities for skilled players.</p>
-
-                    </div>
-
-                    <div class="tag-block">
-
-                        <h5>📌 Key Features & Benefits</h5>
-
-                        <p><strong>Welcome Bonus:</strong> Get ₹56 as a sign-up bonus when you register<br>
-
-                        <strong>Low Withdrawal:</strong> Minimum withdrawal amount is just ₹100<br>
-
-                        <strong>Secure Payments:</strong> Fast and secure payment processing<br>
-
-                        <strong>24/7 Support:</strong> Round-the-clock customer support<br>
-
-                        <strong>Fair Play:</strong> Certified random number generator for fair gameplay<br>
-
-                        <strong>Multiple Games:</strong> Wide variety of skill-based games</p>
-
-                    </div>
-
-                    <div class="tag-block">
-
-                        <h5>📌 INR Rummy Download & Signup Claim Bonus ₹56</h5>
-
-                        <p><strong>ऐप डाउनलोड:</strong><br>
-
-                        INR Rummy APK फाइल डाउनलोड करें: होमपेज पर "Download APK" बटन क्लिक करें।<br>
-
-                        इंस्टॉलेशन इनेबल करें: फोन की सेटिंग्स > सिक्योरिटी > अननोन सोर्सेज को ऑन करें।<br>
-
-                        इंस्टॉल करें: डाउनलोडेड फाइल ओपन करें और इंस्टॉल करें।</p>
-
-                        <p><strong>INR Rummy रजिस्टर करें:</strong><br>
-
-                        ऐप ओपन करें, मोबाइल नंबर वेरिफाई करें, और हिंदी लैंग्वेज सिलेक्ट करें।<br>
-
-                        साइन-अप पर ₹56 बोनस क्रेडिट हो जाएगा।</p>
-
-                        <p><strong>INR Rummy Bonus Claim:</strong><br>
-
-                        साइन-अप बोनस: ₹56 फ्री कैश (नए यूजर्स के लिए)।<br>
-
-                        रेफर & अर्न: दोस्तों को रेफर करने पर ₹10-50 प्रति रेफरल।<br>
-
-                        मिनिमम विदड्रॉल: ₹100 (बैंक या UPI से)।<br>
-
-                        गेम्स: रमी, टीन पत्ती, लूडो आदि.</p>
-
-                    </div>
-
-                    <div class="tag-block">
-
-                        <h5>📌 How to Download & Install</h5>
-
-                        <p>Downloading INR Rummy is simple and straightforward. Follow these easy steps:</p>
-
-                        <ol style="padding-left:20px;">
-
-                            <li>Click on the download button above</li>
-
-                            <li>Allow installation from unknown sources in your device settings</li>
-
-                            <li>Install the APK file once downloaded</li>
-
-                            <li>Register with your mobile number</li>
-
-                            <li>Verify your account and start playing</li>
-
-                            <li>Claim your welcome bonus of ₹56</li>
-
-                        </ol>
-
-                    </div>
-
-                    <div class="tag-block">
-
-                        <h5>📌 Safety & Security</h5>
-
-                        <p>Your safety and security are our top priorities. INR Rummy uses advanced encryption technology to protect your personal and financial information. All transactions are processed through secure payment gateways, ensuring your money is always safe. The app is regularly updated with the latest security patches and features to provide you with the best gaming experience while maintaining the highest standards of security.</p>
-
-                    </div>
-
+                    <div class="tag-block"><h5>📌 INR Rummy (Yono) Game App – Real Cash Rummy for Indian Players</h5><p>INR Rummy App is a real cash online rummy gaming platform designed for Indian players who want to earn money by using their skills. This app provides a smooth and secure gaming experience with multiple rummy tables to play and win real cash rewards. Players can join different tables, compete with others, and earn real money through gameplay. The interface is simple and user-friendly, making it suitable for both beginners and experienced players. INR Rummy App is known for its fast withdrawal system, where users can withdraw their winnings quickly via UPI. It also offers signup bonuses and daily rewards to help users start earning easily. If you are looking for a reliable rummy app to earn real cash online, INR Rummy App is a great option. Download the APK now and start playing.</p></div>
+                    <div class="tag-block"><h5>📌 About INR Rummy</h5><p>INR Rummy is one of the most popular gaming applications in India, offering users an exciting opportunity to earn real money while playing their favorite games. With a user-friendly interface and secure payment system, this app has gained the trust of thousands of players across the country. The app features a wide variety of games including Rummy, Teen Patti, Poker, and many other skill-based games that not only provide entertainment but also offer substantial earning opportunities for skilled players.</p></div>
+                    <div class="tag-block"><h5>📌 Key Features & Benefits</h5><p><strong>Welcome Bonus:</strong> Get ₹56 as a sign-up bonus when you register<br><strong>Low Withdrawal:</strong> Minimum withdrawal amount is just ₹100<br><strong>Secure Payments:</strong> Fast and secure payment processing<br><strong>24/7 Support:</strong> Round-the-clock customer support<br><strong>Fair Play:</strong> Certified random number generator for fair gameplay<br><strong>Multiple Games:</strong> Wide variety of skill-based games</p></div>
+                    <div class="tag-block"><h5>📌 INR Rummy Download & Signup Claim Bonus ₹56</h5><p><strong>ऐप डाउनलोड:</strong> INR Rummy APK फाइल डाउनलोड करें: होमपेज पर "Download APK" बटन क्लिक करें।<br>इंस्टॉलेशन इनेबल करें: फोन की सेटिंग्स > सिक्योरिटी > अननोन सोर्सेज को ऑन करें।<br>इंस्टॉल करें: डाउनलोडेड फाइल ओपन करें और इंस्टॉल करें।</p><p><strong>INR Rummy रजिस्टर करें:</strong> ऐप ओपन करें, मोबाइल नंबर वेरिफाई करें, और हिंदी लैंग्वेज सिलेक्ट करें।<br>साइन-अप पर ₹56 बोनस क्रेडिट हो जाएगा।</p><p><strong>INR Rummy Bonus Claim:</strong> साइन-अप बोनस: ₹56 फ्री कैश (नए यूजर्स के लिए)।<br>रेफर & अर्न: दोस्तों को रेफर करने पर ₹10-50 प्रति रेफरल।<br>मिनिमम विदड्रॉल: ₹100 (बैंक या UPI से)।<br>गेम्स: रमी, टीन पत्ती, लूडो आदि.</p></div>
+                    <div class="tag-block"><h5>📌 How to Download & Install</h5><p>Downloading INR Rummy is simple and straightforward. Follow these easy steps:</p><ol style="padding-left:20px;"><li>Click on the download button above</li><li>Allow installation from unknown sources in your device settings</li><li>Install the APK file once downloaded</li><li>Register with your mobile number</li><li>Verify your account and start playing</li><li>Claim your welcome bonus of ₹56</li></ol></div>
+                    <div class="tag-block"><h5>📌 Safety & Security</h5><p>Your safety and security are our top priorities. INR Rummy uses advanced encryption technology to protect your personal and financial information. All transactions are processed through secure payment gateways, ensuring your money is always safe. The app is regularly updated with the latest security patches and features to provide you with the best gaming experience while maintaining the highest standards of security.</p></div>
                 </div>
-
             </div>
-
             `;
-
-        } else {
-
-            // For other apps, show a generic tag panel (or keep it empty)
-
+        } else if (selectedApp.name === "MBM BET") {
             tagPanelHtml = `
-
             <button class="tags-toggle-btn" id="tagsToggleBtn" style="background:linear-gradient(135deg,#6c5ce7,#fd79a8);">
-
-                <span>📋 ${selectedApp.name} APK Tags</span>
-
+                <span>📋 MBM BET APK Download Tags</span>
                 <span class="arrow" id="tagsArrow">▼</span>
-
             </button>
-
             <div class="tags-panel" id="tagsPanel">
-
                 <div class="tags-panel-content">
-
-                    <div class="tag-block">
-
-                        <h5>📌 ${selectedApp.name} – Key Information</h5>
-
-                        <p><strong>App Name:</strong> ${selectedApp.name}<br>
-
-                        <strong>Category:</strong> ${selectedApp.category}<br>
-
-                        <strong>Welcome Bonus:</strong> ${selectedApp.bonus}<br>
-
-                        <strong>Min Withdrawal:</strong> ${selectedApp.withdrawal}<br>
-
-                        <strong>Secure & Trusted:</strong> Yes</p>
-
-                    </div>
-
-                    <div class="tag-block">
-
-                        <h5>📌 About ${selectedApp.name}</h5>
-
-                        <p>${selectedApp.name} is a popular gaming application offering exciting opportunities to earn real money. With a user-friendly interface and secure payment system, it has gained the trust of thousands of players. The app features a variety of games including Rummy, Teen Patti, Slots, and more.</p>
-
-                    </div>
-
-                    <div class="tag-block">
-
-                        <h5>📌 How to Download & Install</h5>
-
-                        <p>Click the DOWNLOAD button, allow unknown sources, install the APK, register, and claim your bonus. Start playing and winning today!</p>
-
-                    </div>
-
+                    <div class="tag-block"><h5>📌 MBM Bet (Yono)</h5><p>MBM Bet (Yono) provides a superior real-money gaming experience with fast gameplay, secure payments, and verified ₹100 withdrawals. The new version features smooth performance, instant registration, and high-return games. With daily bonuses, stable servers, and trusted payouts, MBM Bet stands out as one of the strongest earning apps in the Yono series.</p></div>
+                    <div class="tag-block"><h5>📌 About MBM Bet apk</h5><p>MBM Bet is one of the most popular gaming applications in India, offering users an exciting opportunity to earn real money while playing their favorite games. With a user-friendly interface and secure payment system, this app has gained the trust of thousands of players across the country. The app features a wide variety of games including Rummy, Teen Patti, Poker, and many other skill-based games that not only provide entertainment but also offer substantial earning opportunities for skilled players.</p></div>
+                    <div class="tag-block"><h5>📌 Key Features & Benefits</h5><p><strong>Welcome Bonus:</strong> Get ₹39 as a sign-up bonus when you register<br><strong>Low Withdrawal:</strong> Minimum withdrawal amount is just ₹100<br><strong>Secure Payments:</strong> Fast and secure payment processing<br><strong>24/7 Support:</strong> Round-the-clock customer support<br><strong>Fair Play:</strong> Certified random number generator for fair gameplay<br><strong>Multiple Games:</strong> Wide variety of skill-based games</p></div>
+                    <div class="tag-block"><h5>📌 MBM Bet Download & Signup Claim Bonus ₹39</h5><p><strong>ऐप डाउनलोड:</strong> MBM Bet APK फाइल डाउनलोड करें: होमपेज पर "Download APK" बटन क्लिक करें।<br>इंस्टॉलेशन इनेबल करें: फोन की सेटिंग्स > सिक्योरिटी > अननोन सोर्सेज को ऑन करें।<br>इंस्टॉल करें: डाउनलोडेड फाइल ओपन करें और इंस्टॉल करें।</p><p><strong>MBM Bet रजिस्टर करें:</strong> ऐप ओपन करें, मोबाइल नंबर वेरिफाई करें, और हिंदी लैंग्वेज सिलेक्ट करें।<br>साइन-अप पर ₹39 बोनस क्रेडिट हो जाएगा।</p><p><strong>MBM Bet Bonus Claim:</strong> साइन-अप बोनस: ₹39 फ्री कैश (नए यूजर्स के लिए)।<br>रेफर & अर्न: दोस्तों को रेफर करने पर ₹10-50 प्रति रेफरल।<br>मिनिमम विदड्रॉल: ₹100 (बैंक या UPI से)।<br>गेम्स: रमी, टीन पत्ती, लूडो आदि.</p></div>
+                    <div class="tag-block"><h5>📌 How to Download & Install</h5><p>Downloading MBM Bet is simple and straightforward. Follow these easy steps:</p><ol style="padding-left:20px;"><li>Click on the download button above</li><li>Allow installation from unknown sources in your device settings</li><li>Install the APK file once downloaded</li><li>Register with your mobile number</li><li>Verify your account and start playing</li><li>Claim your welcome bonus of ₹39</li></ol></div>
+                    <div class="tag-block"><h5>📌 Safety & Security</h5><p>Your safety and security are our top priorities. MBM Bet uses advanced encryption technology to protect your personal and financial information. All transactions are processed through secure payment gateways, ensuring your money is always safe. The app is regularly updated with the latest security patches and features to provide you with the best gaming experience while maintaining the highest standards of security.</p></div>
                 </div>
-
             </div>
-
             `;
-
+        } else if (selectedApp.name === "Bingo 101") {
+            tagPanelHtml = `
+            <button class="tags-toggle-btn" id="tagsToggleBtn" style="background:linear-gradient(135deg,#e67e22,#f39c12);">
+                <span>📋 Bingo 101 APK Download Tags</span>
+                <span class="arrow" id="tagsArrow">▼</span>
+            </button>
+            <div class="tags-panel" id="tagsPanel">
+                <div class="tags-panel-content">
+                    <div class="tag-block"><h5>📌 Bingo 101 (Yono) App Download – Play Bingo & Win Cash</h5><p>Bingo 101 App is a real cash gaming platform where users can play exciting bingo games and earn money online. New users can claim a signup bonus ranging from ₹50 to ₹500 instantly after registration, making it easy to start playing without high investment. The app offers smooth and engaging gameplay with multiple bingo rooms and reward-based challenges. Players can join games, compete with others, and win real cash prizes daily. Bingo 101 App also provides a fast and secure withdrawal system. Users can easily withdraw their earnings directly via UPI with quick processing. Daily rewards, bonuses, and referral options help increase overall earnings. If you are looking for a fun and easy way to earn money through bingo games, Bingo 101 App is a great option. Download the APK now and start winning real cash.</p></div>
+                    <div class="tag-block"><h5>📌 About Bingo 101</h5><p>Bingo 101 is one of the most popular gaming applications in India, offering users an exciting opportunity to earn real money while playing their favorite games. With a user-friendly interface and secure payment system, this app has gained the trust of thousands of players across the country. The app features a wide variety of games including Rummy, Teen Patti, Poker, and many other skill-based games that not only provide entertainment but also offer substantial earning opportunities for skilled players.</p></div>
+                    <div class="tag-block"><h5>📌 Key Features & Benefits</h5><p><strong>Welcome Bonus:</strong> Get ₹44 as a sign-up bonus when you register<br><strong>Low Withdrawal:</strong> Minimum withdrawal amount is just ₹100<br><strong>Secure Payments:</strong> Fast and secure payment processing<br><strong>24/7 Support:</strong> Round-the-clock customer support<br><strong>Fair Play:</strong> Certified random number generator for fair gameplay<br><strong>Multiple Games:</strong> Wide variety of skill-based games</p></div>
+                    <div class="tag-block"><h5>📌 Bingo 101 Download & Signup Claim Bonus ₹44</h5><p><strong>ऐप डाउनलोड:</strong> Bingo 101 APK फाइल डाउनलोड करें: होमपेज पर "Download APK" बटन क्लिक करें।<br>इंस्टॉलेशन इनेबल करें: फोन की सेटिंग्स > सिक्योरिटी > अननोन सोर्सेज को ऑन करें।<br>इंस्टॉल करें: डाउनलोडेड फाइल ओपन करें और इंस्टॉल करें।</p><p><strong>Bingo 101 रजिस्टर करें:</strong> ऐप ओपन करें, मोबाइल नंबर वेरिफाई करें, और हिंदी लैंग्वेज सिलेक्ट करें।<br>साइन-अप पर ₹44 बोनस क्रेडिट हो जाएगा।</p><p><strong>Bingo 101 Bonus Claim:</strong> साइन-अप बोनस: ₹44 फ्री कैश (नए यूजर्स के लिए)।<br>रेफर & अर्न: दोस्तों को रेफर करने पर ₹10-50 प्रति रेफरल।<br>मिनिमम विदड्रॉल: ₹100 (बैंक या UPI से)।<br>गेम्स: रमी, टीन पत्ती, लूडो आदि.</p></div>
+                    <div class="tag-block"><h5>📌 How to Download & Install</h5><p>Downloading Bingo 101 is simple and straightforward. Follow these easy steps:</p><ol style="padding-left:20px;"><li>Click on the download button above</li><li>Allow installation from unknown sources in your device settings</li><li>Install the APK file once downloaded</li><li>Register with your mobile number</li><li>Verify your account and start playing</li><li>Claim your welcome bonus of ₹44</li></ol></div>
+                    <div class="tag-block"><h5>📌 Safety & Security</h5><p>Your safety and security are our top priorities. Bingo 101 uses advanced encryption technology to protect your personal and financial information. All transactions are processed through secure payment gateways, ensuring your money is always safe. The app is regularly updated with the latest security patches and features to provide you with the best gaming experience while maintaining the highest standards of security.</p></div>
+                </div>
+            </div>
+            `;
+        } else if (selectedApp.name === "Jaiho 91") {
+            tagPanelHtml = `
+            <button class="tags-toggle-btn" id="tagsToggleBtn" style="background:linear-gradient(135deg,#e74c3c,#c0392b);">
+                <span>📋 Jaiho 91 APK Download Tags</span>
+                <span class="arrow" id="tagsArrow">▼</span>
+            </button>
+            <div class="tags-panel" id="tagsPanel">
+                <div class="tags-panel-content">
+                    <div class="tag-block"><h5>📌 Jaiho 91 – Real Cash Casino</h5><p>Download Jaiho 91 APK and get ₹50 signup bonus instantly. Play exciting casino games, win real money, earn daily rewards, and withdraw cash directly via UPI. Fast secure platform with 24/7 support.</p></div>
+                    <div class="tag-block"><h5>📌 About Jaiho 91</h5><p>Jaiho 91 is a popular gaming application offering users an exciting opportunity to earn real money while playing their favorite games. With a user-friendly interface and secure payment system, this app has gained the trust of thousands of players across the country.</p></div>
+                    <div class="tag-block"><h5>📌 Key Features & Benefits</h5><p><strong>Welcome Bonus:</strong> Get ₹50 as a sign-up bonus when you register<br><strong>Low Withdrawal:</strong> Minimum withdrawal amount is just ₹100<br><strong>Secure Payments:</strong> Fast and secure payment processing<br><strong>24/7 Support:</strong> Round-the-clock customer support<br><strong>Fair Play:</strong> Certified random number generator for fair gameplay<br><strong>Multiple Games:</strong> Wide variety of skill-based games</p></div>
+                    <div class="tag-block"><h5>📌 How to Download & Install</h5><p>Click the DOWNLOAD button, allow unknown sources, install the APK, register, and claim your ₹50 bonus.</p></div>
+                </div>
+            </div>
+            `;
+        } else if (selectedApp.name === "Rummy 91") {
+            tagPanelHtml = `
+            <button class="tags-toggle-btn" id="tagsToggleBtn" style="background:linear-gradient(135deg,#8e44ad,#9b59b6);">
+                <span>📋 Rummy 91 APK Download Tags</span>
+                <span class="arrow" id="tagsArrow">▼</span>
+            </button>
+            <div class="tags-panel" id="tagsPanel">
+                <div class="tags-panel-content">
+                    <div class="tag-block"><h5>📌 Rummy 91 – Play & Earn Real Cash</h5><p>Download Rummy91 APK and get a ₹35–₹191 signup bonus instantly. Play online rummy, earn real cash daily, and withdraw securely via UPI from just ₹100.</p></div>
+                    <div class="tag-block"><h5>📌 About Rummy 91</h5><p>Rummy 91 is one of the most popular gaming applications in India, offering users an exciting opportunity to earn real money while playing their favorite games.</p></div>
+                    <div class="tag-block"><h5>📌 Key Features & Benefits</h5><p><strong>Welcome Bonus:</strong> Get ₹33 as a sign-up bonus when you register<br><strong>Low Withdrawal:</strong> Minimum withdrawal amount is just ₹100<br><strong>Secure Payments:</strong> Fast and secure payment processing<br><strong>24/7 Support:</strong> Round-the-clock customer support<br><strong>Fair Play:</strong> Certified random number generator for fair gameplay<br><strong>Multiple Games:</strong> Wide variety of skill-based games</p></div>
+                </div>
+            </div>
+            `;
+        } else if (selectedApp.name === "Yono Games") {
+            tagPanelHtml = `
+            <button class="tags-toggle-btn" id="tagsToggleBtn" style="background:linear-gradient(135deg,#f1c40f,#f39c12);">
+                <span>📋 Yono Games APK Download Tags</span>
+                <span class="arrow" id="tagsArrow">▼</span>
+            </button>
+            <div class="tags-panel" id="tagsPanel">
+                <div class="tags-panel-content">
+                    <div class="tag-block"><h5>📌 Yono Games – Best Real-Cash Rummy App</h5><p>Claim your ₹37–₹268 signup bonus on Yono Games and start playing instantly. With a low ₹100 minimum withdrawal and smooth gaming experience, it stands out as one of the best real-cash Rummy apps. Safe, fast, and reliable for daily earnings.</p></div>
+                    <div class="tag-block"><h5>📌 About Yono Games</h5><p>Yono Games is one of the most popular gaming applications in India, offering users an exciting opportunity to earn real money while playing their favorite games.</p></div>
+                    <div class="tag-block"><h5>📌 Key Features & Benefits</h5><p><strong>Welcome Bonus:</strong> Get ₹45 as a sign-up bonus when you register<br><strong>Low Withdrawal:</strong> Minimum withdrawal amount is just ₹100<br><strong>Secure Payments:</strong> Fast and secure payment processing<br><strong>24/7 Support:</strong> Round-the-clock customer support<br><strong>Fair Play:</strong> Certified random number generator for fair gameplay<br><strong>Multiple Games:</strong> Wide variety of skill-based games</p></div>
+                </div>
+            </div>
+            `;
+        } else if (selectedApp.name === "Diwa VIP") {
+            tagPanelHtml = `
+            <button class="tags-toggle-btn" id="tagsToggleBtn" style="background:linear-gradient(135deg,#e91e63,#ad1457);">
+                <span>📋 Diwa VIP APK Download Tags</span>
+                <span class="arrow" id="tagsArrow">▼</span>
+            </button>
+            <div class="tags-panel" id="tagsPanel">
+                <div class="tags-panel-content">
+                    <div class="tag-block"><h5>📌 Diwa VIP – Premium Slots & Fast Withdrawals</h5><p>Download DIWA VIP APK now & claim your exclusive welcome bonus! Access premium high-RTP slots and games with priority, ultra-fast UPI withdrawals. Join today!</p></div>
+                    <div class="tag-block"><h5>📌 About Diwa VIP</h5><p>Diwa VIP is a premium gaming application offering exclusive slots and games with high returns.</p></div>
+                </div>
+            </div>
+            `;
+        } else if (selectedApp.name === "Diwa Slot") {
+            tagPanelHtml = `
+            <button class="tags-toggle-btn" id="tagsToggleBtn" style="background:linear-gradient(135deg,#2ecc71,#27ae60);">
+                <span>📋 Diwa Slots APK Download Tags</span>
+                <span class="arrow" id="tagsArrow">▼</span>
+            </button>
+            <div class="tags-panel" id="tagsPanel">
+                <div class="tags-panel-content">
+                    <div class="tag-block"><h5>📌 Diwa Slots App – Free ₹35–₹500 Sign Up Bonus</h5><p>Diwa Slots App is a real cash gaming platform where users can play exciting slot and skill-based games to earn money online. New users can get a signup bonus ranging from ₹35 to ₹500 instantly after registration. The app offers smooth gameplay, fast performance, and a variety of games.</p></div>
+                    <div class="tag-block"><h5>📌 About Diwa Slots</h5><p>Diwa Slots is one of the most popular gaming applications in India, offering users an exciting opportunity to earn real money while playing their favorite games.</p></div>
+                    <div class="tag-block"><h5>📌 Key Features & Benefits</h5><p><strong>Welcome Bonus:</strong> Get ₹35–₹500 as a sign-up bonus when you register<br><strong>Low Withdrawal:</strong> Minimum withdrawal amount is just ₹100<br><strong>Secure Payments:</strong> Fast and secure payment processing<br><strong>24/7 Support:</strong> Round-the-clock customer support</p></div>
+                </div>
+            </div>
+            `;
+        } else if (selectedApp.name === "Saga Slots") {
+            tagPanelHtml = `
+            <button class="tags-toggle-btn" id="tagsToggleBtn" style="background:linear-gradient(135deg,#3498db,#2980b9);">
+                <span>📋 Saga Slots APK Download Tags</span>
+                <span class="arrow" id="tagsArrow">▼</span>
+            </button>
+            <div class="tags-panel" id="tagsPanel">
+                <div class="tags-panel-content">
+                    <div class="tag-block"><h5>📌 Saga Slots (Yono) – Premium Slot Gameplay</h5><p>Saga Slots (Yono) offers Signup Bonus ₹30–₹60 and premium slot gameplay, fast bonus rewards, and instant ₹100 UPI withdrawals. Enjoy smooth spins, daily bonuses, and real cash winnings.</p></div>
+                    <div class="tag-block"><h5>📌 About Saga Slots</h5><p>Saga Slots is one of the most popular gaming applications in India, offering users an exciting opportunity to earn real money while playing their favorite games.</p></div>
+                    <div class="tag-block"><h5>📌 Key Features & Benefits</h5><p><strong>Welcome Bonus:</strong> Get ₹44 as a sign-up bonus when you register<br><strong>Low Withdrawal:</strong> Minimum withdrawal amount is just ₹100<br><strong>Secure Payments:</strong> Fast and secure payment processing</p></div>
+                </div>
+            </div>
+            `;
+        } else if (selectedApp.name === "567 Slots") {
+            tagPanelHtml = `
+            <button class="tags-toggle-btn" id="tagsToggleBtn" style="background:linear-gradient(135deg,#f39c12,#e67e22);">
+                <span>📋 567 Slots APK Download Tags</span>
+                <span class="arrow" id="tagsArrow">▼</span>
+            </button>
+            <div class="tags-panel" id="tagsPanel">
+                <div class="tags-panel-content">
+                    <div class="tag-block"><h5>📌 567 Slots 2026 – Superior Slot Gaming</h5><p>Download 567 Slots 2026 for a superior slot gaming experience. Featuring stable servers, premium slot games, daily bonus rewards, and trusted withdrawals, it provides a reliable and enjoyable earning environment.</p></div>
+                    <div class="tag-block"><h5>📌 About 567 Slots</h5><p>567 Slots is one of the most popular gaming applications in India, offering users an exciting opportunity to earn real money while playing their favorite games.</p></div>
+                    <div class="tag-block"><h5>📌 Key Features & Benefits</h5><p><strong>Welcome Bonus:</strong> Get ₹44 as a sign-up bonus when you register<br><strong>Low Withdrawal:</strong> Minimum withdrawal amount is just ₹100<br><strong>Secure Payments:</strong> Fast and secure payment processing</p></div>
+                </div>
+            </div>
+            `;
+        } else {
+            // Generic tag panel for other apps
+            tagPanelHtml = `
+            <button class="tags-toggle-btn" id="tagsToggleBtn" style="background:linear-gradient(135deg,#6c5ce7,#fd79a8);">
+                <span>📋 ${selectedApp.name} APK Tags</span>
+                <span class="arrow" id="tagsArrow">▼</span>
+            </button>
+            <div class="tags-panel" id="tagsPanel">
+                <div class="tags-panel-content">
+                    <div class="tag-block"><h5>📌 ${selectedApp.name} – Key Information</h5><p><strong>App Name:</strong> ${selectedApp.name}<br><strong>Category:</strong> ${selectedApp.category}<br><strong>Welcome Bonus:</strong> ${selectedApp.bonus}<br><strong>Min Withdrawal:</strong> ${selectedApp.withdrawal}<br><strong>Secure & Trusted:</strong> Yes</p></div>
+                    <div class="tag-block"><h5>📌 About ${selectedApp.name}</h5><p>${selectedApp.name} is a popular gaming application offering exciting opportunities to earn real money. With a user-friendly interface and secure payment system, it has gained the trust of thousands of players.</p></div>
+                    <div class="tag-block"><h5>📌 How to Download & Install</h5><p>Click the DOWNLOAD button, allow unknown sources, install the APK, register, and claim your bonus. Start playing and winning today!</p></div>
+                </div>
+            </div>
+            `;
         }
 
 
